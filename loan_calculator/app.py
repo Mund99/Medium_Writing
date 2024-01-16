@@ -8,6 +8,7 @@ app = Dash(__name__)
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 # Define a vibrant color scheme
 colors = {
@@ -45,6 +46,7 @@ def create_layout():
         html.Div(id="result", style={'margin-top': '30px', 'textAlign': 'center', 'color': colors['text'], 'fontSize': '18px'})
     ])
 
+app.layout = create_layout()
 
 @app.callback(
     Output("result", "children"),
@@ -87,10 +89,9 @@ def update_result(n_clicks, total_loan, tenure, interest_rate):
 
         return result_html
 
-server = app.server
+
 
 if __name__ == "__main__":
-    app.layout = create_layout()
-    app.run_server(debug=False, host="0.0.0.0",port=8080)
+    app.run_server(debug=False)
 
 
