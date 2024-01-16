@@ -87,6 +87,8 @@ def update_result(n_clicks, total_loan, tenure, interest_rate):
 
         return result_html
 
+server = app.server
+
 if __name__ == "__main__":
     app.layout = create_layout()
     app.run(debug=False, host="0.0.0.0",port=8080)
