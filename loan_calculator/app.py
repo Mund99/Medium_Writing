@@ -35,7 +35,7 @@ def create_layout():
             ], style={'margin-bottom': '20px', 'textAlign': 'center'}),
 
             html.Div([
-                html.Label("Annual Interest Rate (%):", style={'color': colors['text']}),
+                html.Label("Interest Rate p.a. (%):", style={'color': colors['text']}),
                 dcc.Input(id="interest_rate", type="number", placeholder="Enter annual interest rate", required=True,
                           style={'margin-bottom': '20px', 'color': colors['text']}),
             ], style={'margin-bottom': '20px', 'textAlign': 'center'}),
