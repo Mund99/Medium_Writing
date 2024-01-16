@@ -70,8 +70,3 @@ def calculate_loan_metrics(total_loan, tenure_yr, interest_rate):
     effective_interest_rate = find_effective_interest_rate(total_loan, monthly_installment, tenure_yr, interest_rate)
 
     return monthly_installment, total_repayment, effective_interest_rate
-
-if __name__ == "__main__":
-    from app import app
-    app.run(debug=True)
-
