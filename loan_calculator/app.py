@@ -2,12 +2,11 @@ from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
 from loan_calculator import calculate_loan_metrics
 
-app = Dash(__name__)
-
 # External CSS stylesheets for additional styling
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = Dash(__name__, external_stylesheets=external_stylesheets)
+app.title = 'Loan Calculator'
 server = app.server
 
 # Define a vibrant color scheme
