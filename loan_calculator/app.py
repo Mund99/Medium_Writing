@@ -91,6 +91,6 @@ def update_result(n_clicks, total_loan, tenure, interest_rate):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=False)
+    app.run(debug=False, host="0.0.0.0",port=8080)
 
 
